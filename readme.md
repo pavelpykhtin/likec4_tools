@@ -44,7 +44,7 @@ tsx ./index.ts export-threat-model --workspace ../arch
 Exports all defined relationships into csv file.
 
 ```
-tsx ./index.ts export-threat-model --workspace ../arch
+tsx ./index.ts export-relationships --workspace ../arch
 ```
 
 ### Validate protocols
@@ -52,5 +52,5 @@ Enshures that all relationships of the model has the protocol (technology) and p
 Useful to find gaps in the model.
 
 ```
-tsx ./index.ts export-threat-model --workspace ../arch
+tsx ./index.ts validate-protocols --workspace ../arch
 ```
