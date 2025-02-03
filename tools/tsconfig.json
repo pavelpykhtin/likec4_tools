@@ -1,53 +1,9 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Base Strictest",
-    "exclude": [
-        "node_modules",
-    ],
     "compilerOptions": {
-        "lib": [
-            "ESNext"
-        ],
-        "target": "ES2023",
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
-        "declaration": true,
-        "declarationMap": true,
-        "experimentalDecorators": true,
-        "strict": true,
-        "resolveJsonModule": true,
         "esModuleInterop": true,
-        "allowUnusedLabels": false,
-        "allowUnreachableCode": false,
-        "allowArbitraryExtensions": true,
-        "exactOptionalPropertyTypes": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitOverride": true,
-        "noImplicitReturns": true,
-        "noImplicitAny": true,
-        "noUnusedParameters": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noUncheckedIndexedAccess": true,
-        "verbatimModuleSyntax": true,
-        "allowJs": true,
-        "checkJs": true,
-        "isolatedModules": true,
-        "skipLibCheck": true,
-        "skipDefaultLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "useDefineForClassFields": true,
-        "pretty": true,
-        "rootDir": ".",
-        "baseUrl": ".",
-        "types": [
-            "node"
-        ],
-        "noEmit": true,
-        "allowImportingTsExtensions": true
-    },
-    "include": [
-        "**/*.ts",
-        "index.ts"
-    ],
-
+        "moduleResolution": "bundler",
+        "module": "esnext",
+        "target": "ESNext",
+        "lib": ["ESNext"]
+    }
 }

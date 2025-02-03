@@ -1,0 +1,19 @@
+specification {
+    element person {
+        style {
+            shape person
+        }
+    }
+    element externalSystem {
+        style {
+            color gray
+        }
+    }
+    element softwareSystem {
+        style {
+            color primary
+        }
+    }
+
+    tag threatModelView
+}

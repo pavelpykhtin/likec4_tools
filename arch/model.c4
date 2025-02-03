@@ -1,0 +1,56 @@
+model {
+    person user {
+        title 'User'
+
+        -> eshop 'Browses catalog' 'https' {
+            metadata {
+                protection : 'TLS'
+                dataflowId : 'D_001'
+                dataType: 'Search request'
+            }
+        }
+        -> eshop 'Places order' 'https' {
+            metadata {
+                protection : 'TLS'
+                dataflowId : 'D_002'
+                dataType: 'Order'
+            }
+        }
+        -> identityProvider 'Authenticates in' 'https' {
+            metadata {
+                protection : 'TLS'
+                dataflowId : 'D_003'
+                dataType: 'Credentials'
+            }
+        }
+    }
+
+    person admin {
+        title 'Administrator'
+
+        -> eshop 'Manages'
+        -> identityProvider 'Authenticates in'
+    }
+
+    externalSystem identityProvider {
+        title 'Identity Provider'
+    }
+
+    softwareSystem eshop {
+        title 'E-Shop'
+
+        -> identityProvider 'Delegates authentication' 'https' {
+            metadata {
+                protection : 'TLS'
+                dataflowId : 'D_004'
+            }
+        }
+    }
+}
+views {
+    view index {
+        #threatModelView
+
+        include *
+    }
+}
